@@ -1,0 +1,1587 @@
+
+Chaser4-8-G.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000008c6  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         0000011e  00800060  000008c6  0000095a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000015  0080017e  0080017e  00000a78  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000a78  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000aa8  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001c0  00000000  00000000  00000ae8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001d10  00000000  00000000  00000ca8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d60  00000000  00000000  000029b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000fde  00000000  00000000  00003718  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000002ec  00000000  00000000  000046f8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000967  00000000  00000000  000049e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000cba  00000000  00000000  0000534b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000110  00000000  00000000  00006005  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__ctors_end>
+   4:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+   8:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+   c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  10:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  14:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  18:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  1c:	0c 94 39 03 	jmp	0x672	; 0x672 <__vector_7>
+  20:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  24:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  28:	0c 94 05 04 	jmp	0x80a	; 0x80a <__vector_10>
+  2c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  30:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  34:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  38:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  3c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  40:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  44:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  48:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  4c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  50:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  54:	0c 01       	movw	r0, r24
+  56:	0f 01       	movw	r0, r30
+  58:	12 01       	movw	r2, r4
+  5a:	15 01       	movw	r2, r10
+  5c:	18 01       	movw	r2, r16
+  5e:	1b 01       	movw	r2, r22
+  60:	1e 01       	movw	r2, r28
+  62:	21 01       	movw	r4, r2
+  64:	24 01       	movw	r4, r8
+  66:	27 01       	movw	r4, r14
+  68:	2c 01       	movw	r4, r24
+  6a:	2a 01       	movw	r4, r20
+  6c:	5a 01       	movw	r10, r20
+  6e:	5e 01       	movw	r10, r28
+  70:	62 01       	movw	r12, r4
+  72:	66 01       	movw	r12, r12
+  74:	6a 01       	movw	r12, r20
+  76:	6e 01       	movw	r12, r28
+  78:	72 01       	movw	r14, r4
+  7a:	76 01       	movw	r14, r12
+  7c:	7a 01       	movw	r14, r20
+  7e:	41 02       	muls	r20, r17
+  80:	4b 02       	muls	r20, r27
+  82:	55 02       	muls	r21, r21
+  84:	5f 02       	muls	r21, r31
+  86:	69 02       	muls	r22, r25
+  88:	73 02       	muls	r23, r19
+  8a:	7d 02       	muls	r23, r29
+  8c:	87 02       	muls	r24, r23
+  8e:	91 02       	muls	r25, r17
+  90:	9b 02       	muls	r25, r27
+  92:	b1 02       	muls	r27, r17
+  94:	bb 02       	muls	r27, r27
+  96:	c5 02       	muls	r28, r21
+  98:	cf 02       	muls	r28, r31
+  9a:	d9 02       	muls	r29, r25
+  9c:	e3 02       	muls	r30, r19
+  9e:	ed 02       	muls	r30, r29
+  a0:	f7 02       	muls	r31, r23
+  a2:	01 03       	mulsu	r16, r17
+  a4:	15 03       	mulsu	r17, r21
+  a6:	19 03       	fmul	r17, r17
+  a8:	1d 03       	fmul	r17, r21
+  aa:	21 03       	mulsu	r18, r17
+  ac:	25 03       	mulsu	r18, r21
+  ae:	29 03       	fmul	r18, r17
+  b0:	2d 03       	fmul	r18, r21
+  b2:	31 03       	mulsu	r19, r17
+  b4:	35 03       	mulsu	r19, r21
+
+000000b6 <__ctors_end>:
+  b6:	11 24       	eor	r1, r1
+  b8:	1f be       	out	0x3f, r1	; 63
+  ba:	cf e5       	ldi	r28, 0x5F	; 95
+  bc:	d8 e0       	ldi	r29, 0x08	; 8
+  be:	de bf       	out	0x3e, r29	; 62
+  c0:	cd bf       	out	0x3d, r28	; 61
+
+000000c2 <__do_copy_data>:
+  c2:	11 e0       	ldi	r17, 0x01	; 1
+  c4:	a0 e6       	ldi	r26, 0x60	; 96
+  c6:	b0 e0       	ldi	r27, 0x00	; 0
+  c8:	e6 ec       	ldi	r30, 0xC6	; 198
+  ca:	f8 e0       	ldi	r31, 0x08	; 8
+  cc:	02 c0       	rjmp	.+4      	; 0xd2 <__do_copy_data+0x10>
+  ce:	05 90       	lpm	r0, Z+
+  d0:	0d 92       	st	X+, r0
+  d2:	ae 37       	cpi	r26, 0x7E	; 126
+  d4:	b1 07       	cpc	r27, r17
+  d6:	d9 f7       	brne	.-10     	; 0xce <__do_copy_data+0xc>
+
+000000d8 <__do_clear_bss>:
+  d8:	21 e0       	ldi	r18, 0x01	; 1
+  da:	ae e7       	ldi	r26, 0x7E	; 126
+  dc:	b1 e0       	ldi	r27, 0x01	; 1
+  de:	01 c0       	rjmp	.+2      	; 0xe2 <.do_clear_bss_start>
+
+000000e0 <.do_clear_bss_loop>:
+  e0:	1d 92       	st	X+, r1
+
+000000e2 <.do_clear_bss_start>:
+  e2:	a3 39       	cpi	r26, 0x93	; 147
+  e4:	b2 07       	cpc	r27, r18
+  e6:	e1 f7       	brne	.-8      	; 0xe0 <.do_clear_bss_loop>
+  e8:	0e 94 10 02 	call	0x420	; 0x420 <main>
+  ec:	0c 94 61 04 	jmp	0x8c2	; 0x8c2 <_exit>
+
+000000f0 <__bad_interrupt>:
+  f0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000f4 <check_buttons>:
+uint8_t still_pressed_dwn;
+uint8_t displaying_velocity;
+
+void check_buttons(void)
+{	
+	stateUpBtn =  (PINBUTTONS & BTNUP) ? true : false;
+  f4:	80 b3       	in	r24, 0x10	; 16
+  f6:	82 95       	swap	r24
+  f8:	81 70       	andi	r24, 0x01	; 1
+  fa:	80 93 82 01 	sts	0x0182, r24	; 0x800182 <stateUpBtn>
+    if (stateUpBtn == true)
+  fe:	81 30       	cpi	r24, 0x01	; 1
+ 100:	49 f5       	brne	.+82     	; 0x154 <check_buttons+0x60>
+    {		
+		if (still_pressed_up == true)	
+ 102:	80 91 80 01 	lds	r24, 0x0180	; 0x800180 <still_pressed_up>
+ 106:	81 30       	cpi	r24, 0x01	; 1
+ 108:	a9 f5       	brne	.+106    	; 0x174 <check_buttons+0x80>
+		{	
+			program_counter++;	
+ 10a:	40 91 8c 01 	lds	r20, 0x018C	; 0x80018c <program_counter>
+ 10e:	4f 5f       	subi	r20, 0xFF	; 255
+			program_counter = program_counter > 9 ? 1 : program_counter;
+ 110:	4a 30       	cpi	r20, 0x0A	; 10
+ 112:	08 f0       	brcs	.+2      	; 0x116 <check_buttons+0x22>
+ 114:	48 2f       	mov	r20, r24
+ 116:	40 93 8c 01 	sts	0x018C, r20	; 0x80018c <program_counter>
+			still_pressed_up = false;						
+ 11a:	10 92 80 01 	sts	0x0180, r1	; 0x800180 <still_pressed_up>
+			has_changed = PROGRAM;
+ 11e:	81 e0       	ldi	r24, 0x01	; 1
+ 120:	90 e0       	ldi	r25, 0x00	; 0
+ 122:	90 93 8e 01 	sts	0x018E, r25	; 0x80018e <has_changed+0x1>
+ 126:	80 93 8d 01 	sts	0x018D, r24	; 0x80018d <has_changed>
+			displaying_velocity = false;
+ 12a:	10 92 7e 01 	sts	0x017E, r1	; 0x80017e <__data_end>
+			Handler.DisplayOut(PROGRAM, program_counter);
+ 12e:	61 e0       	ldi	r22, 0x01	; 1
+ 130:	83 e8       	ldi	r24, 0x83	; 131
+ 132:	91 e0       	ldi	r25, 0x01	; 1
+ 134:	0e 94 3d 01 	call	0x27a	; 0x27a <_ZN12HandleChaser10DisplayOutEhh>
+			// todo, salvar despues de un tiempo de dejar de apretar el boton
+			Handler.SaveEeprom(EE_PROGRAM,program_counter);
+ 138:	40 91 8c 01 	lds	r20, 0x018C	; 0x80018c <program_counter>
+ 13c:	60 e0       	ldi	r22, 0x00	; 0
+ 13e:	83 e8       	ldi	r24, 0x83	; 131
+ 140:	91 e0       	ldi	r25, 0x01	; 1
+ 142:	0e 94 82 01 	call	0x304	; 0x304 <_ZN12HandleChaser10SaveEepromEhh>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 146:	8f ed       	ldi	r24, 0xDF	; 223
+ 148:	9e e2       	ldi	r25, 0x2E	; 46
+ 14a:	01 97       	sbiw	r24, 0x01	; 1
+ 14c:	f1 f7       	brne	.-4      	; 0x14a <check_buttons+0x56>
+ 14e:	00 c0       	rjmp	.+0      	; 0x150 <check_buttons+0x5c>
+ 150:	00 00       	nop
+ 152:	10 c0       	rjmp	.+32     	; 0x174 <check_buttons+0x80>
+			_delay_ms(3);	  	   
+		}   		
+    }
+    else
+    {		
+		if( still_pressed_up == false )
+ 154:	80 91 80 01 	lds	r24, 0x0180	; 0x800180 <still_pressed_up>
+ 158:	81 11       	cpse	r24, r1
+ 15a:	09 c0       	rjmp	.+18     	; 0x16e <check_buttons+0x7a>
+ 15c:	9f ef       	ldi	r25, 0xFF	; 255
+ 15e:	2f ec       	ldi	r18, 0xCF	; 207
+ 160:	87 e0       	ldi	r24, 0x07	; 7
+ 162:	91 50       	subi	r25, 0x01	; 1
+ 164:	20 40       	sbci	r18, 0x00	; 0
+ 166:	80 40       	sbci	r24, 0x00	; 0
+ 168:	e1 f7       	brne	.-8      	; 0x162 <check_buttons+0x6e>
+ 16a:	00 c0       	rjmp	.+0      	; 0x16c <check_buttons+0x78>
+ 16c:	00 00       	nop
+			{		
+				_delay_ms(160);
+			}			
+		still_pressed_up = true;	
+ 16e:	81 e0       	ldi	r24, 0x01	; 1
+ 170:	80 93 80 01 	sts	0x0180, r24	; 0x800180 <still_pressed_up>
+    }
+	
+    stateDownBtn =  (PINBUTTONS & BTNDWN) ? true : false;
+ 174:	80 b3       	in	r24, 0x10	; 16
+ 176:	85 fb       	bst	r24, 5
+ 178:	88 27       	eor	r24, r24
+ 17a:	80 f9       	bld	r24, 0
+ 17c:	80 93 81 01 	sts	0x0181, r24	; 0x800181 <stateDownBtn>
+    
+	if (stateDownBtn == true)
+ 180:	81 30       	cpi	r24, 0x01	; 1
+ 182:	81 f5       	brne	.+96     	; 0x1e4 <check_buttons+0xf0>
+    {
+			if (still_pressed_dwn == true)
+ 184:	80 91 7f 01 	lds	r24, 0x017F	; 0x80017f <still_pressed_dwn>
+ 188:	81 30       	cpi	r24, 0x01	; 1
+ 18a:	e1 f5       	brne	.+120    	; 0x204 <check_buttons+0x110>
+			{
+				velocity_counter++;								
+ 18c:	40 91 8b 01 	lds	r20, 0x018B	; 0x80018b <velocity_counter>
+ 190:	4f 5f       	subi	r20, 0xFF	; 255
+				velocity_counter = velocity_counter > 9 ? 1 : velocity_counter;				
+ 192:	4a 30       	cpi	r20, 0x0A	; 10
+ 194:	08 f0       	brcs	.+2      	; 0x198 <check_buttons+0xa4>
+ 196:	48 2f       	mov	r20, r24
+ 198:	40 93 8b 01 	sts	0x018B, r20	; 0x80018b <velocity_counter>
+				still_pressed_dwn = false;
+ 19c:	10 92 7f 01 	sts	0x017F, r1	; 0x80017f <still_pressed_dwn>
+				has_changed = VELOCITY;				
+ 1a0:	82 e0       	ldi	r24, 0x02	; 2
+ 1a2:	90 e0       	ldi	r25, 0x00	; 0
+ 1a4:	90 93 8e 01 	sts	0x018E, r25	; 0x80018e <has_changed+0x1>
+ 1a8:	80 93 8d 01 	sts	0x018D, r24	; 0x80018d <has_changed>
+				
+				displaying_velocity = true;
+ 1ac:	81 e0       	ldi	r24, 0x01	; 1
+ 1ae:	80 93 7e 01 	sts	0x017E, r24	; 0x80017e <__data_end>
+				
+				Handler.DisplayOut(VELOCITY, velocity_counter);
+ 1b2:	62 e0       	ldi	r22, 0x02	; 2
+ 1b4:	83 e8       	ldi	r24, 0x83	; 131
+ 1b6:	91 e0       	ldi	r25, 0x01	; 1
+ 1b8:	0e 94 3d 01 	call	0x27a	; 0x27a <_ZN12HandleChaser10DisplayOutEhh>
+				Handler.SaveEeprom(EE_SPEED, velocity_counter);
+ 1bc:	40 91 8b 01 	lds	r20, 0x018B	; 0x80018b <velocity_counter>
+ 1c0:	61 e0       	ldi	r22, 0x01	; 1
+ 1c2:	83 e8       	ldi	r24, 0x83	; 131
+ 1c4:	91 e0       	ldi	r25, 0x01	; 1
+ 1c6:	0e 94 82 01 	call	0x304	; 0x304 <_ZN12HandleChaser10SaveEepromEhh>
+				
+				Handler.SetVelocity(velocity_counter);
+ 1ca:	60 91 8b 01 	lds	r22, 0x018B	; 0x80018b <velocity_counter>
+ 1ce:	83 e8       	ldi	r24, 0x83	; 131
+ 1d0:	91 e0       	ldi	r25, 0x01	; 1
+ 1d2:	0e 94 4f 01 	call	0x29e	; 0x29e <_ZN12HandleChaser11SetVelocityEh>
+ 1d6:	8f ed       	ldi	r24, 0xDF	; 223
+ 1d8:	9e e2       	ldi	r25, 0x2E	; 46
+ 1da:	01 97       	sbiw	r24, 0x01	; 1
+ 1dc:	f1 f7       	brne	.-4      	; 0x1da <check_buttons+0xe6>
+ 1de:	00 c0       	rjmp	.+0      	; 0x1e0 <check_buttons+0xec>
+ 1e0:	00 00       	nop
+ 1e2:	08 95       	ret
+				_delay_ms(3);				
+			}     
+    }
+    else
+    {
+       if( still_pressed_dwn == false )
+ 1e4:	80 91 7f 01 	lds	r24, 0x017F	; 0x80017f <still_pressed_dwn>
+ 1e8:	81 11       	cpse	r24, r1
+ 1ea:	09 c0       	rjmp	.+18     	; 0x1fe <check_buttons+0x10a>
+ 1ec:	9f ef       	ldi	r25, 0xFF	; 255
+ 1ee:	2f ec       	ldi	r18, 0xCF	; 207
+ 1f0:	87 e0       	ldi	r24, 0x07	; 7
+ 1f2:	91 50       	subi	r25, 0x01	; 1
+ 1f4:	20 40       	sbci	r18, 0x00	; 0
+ 1f6:	80 40       	sbci	r24, 0x00	; 0
+ 1f8:	e1 f7       	brne	.-8      	; 0x1f2 <check_buttons+0xfe>
+ 1fa:	00 c0       	rjmp	.+0      	; 0x1fc <check_buttons+0x108>
+ 1fc:	00 00       	nop
+       {
+	       _delay_ms(160);
+       }       
+       still_pressed_dwn = true;       
+ 1fe:	81 e0       	ldi	r24, 0x01	; 1
+ 200:	80 93 7f 01 	sts	0x017F, r24	; 0x80017f <still_pressed_dwn>
+ 204:	08 95       	ret
+
+00000206 <_Z11selectDigith>:
+#define Display_Off 11
+#define DIGIT_OFF 11
+
+void selectDigit(unsigned char digit)
+{
+	switch (digit)
+ 206:	90 e0       	ldi	r25, 0x00	; 0
+ 208:	8c 30       	cpi	r24, 0x0C	; 12
+ 20a:	91 05       	cpc	r25, r1
+ 20c:	28 f5       	brcc	.+74     	; 0x258 <_Z11selectDigith+0x52>
+ 20e:	fc 01       	movw	r30, r24
+ 210:	e6 5d       	subi	r30, 0xD6	; 214
+ 212:	ff 4f       	sbci	r31, 0xFF	; 255
+ 214:	0c 94 46 04 	jmp	0x88c	; 0x88c <__tablejump2__>
+	{
+		case 0:
+		PORTDisplay = DIGIT_0;
+ 218:	80 ec       	ldi	r24, 0xC0	; 192
+ 21a:	88 bb       	out	0x18, r24	; 24
+		break;
+ 21c:	08 95       	ret
+		case 1:
+		PORTDisplay = DIGIT_1;
+ 21e:	89 ef       	ldi	r24, 0xF9	; 249
+ 220:	88 bb       	out	0x18, r24	; 24
+		break;
+ 222:	08 95       	ret
+		case 2:
+		PORTDisplay = DIGIT_2;
+ 224:	84 ea       	ldi	r24, 0xA4	; 164
+ 226:	88 bb       	out	0x18, r24	; 24
+		break;
+ 228:	08 95       	ret
+		case 3:
+		PORTDisplay = DIGIT_3;
+ 22a:	80 eb       	ldi	r24, 0xB0	; 176
+ 22c:	88 bb       	out	0x18, r24	; 24
+		break;
+ 22e:	08 95       	ret
+		case 4:
+		PORTDisplay = DIGIT_4;
+ 230:	89 e9       	ldi	r24, 0x99	; 153
+ 232:	88 bb       	out	0x18, r24	; 24
+		break;
+ 234:	08 95       	ret
+		case 5:
+		PORTDisplay = DIGIT_5;
+ 236:	82 e9       	ldi	r24, 0x92	; 146
+ 238:	88 bb       	out	0x18, r24	; 24
+		break;
+ 23a:	08 95       	ret
+		case 6:
+		PORTDisplay = DIGIT_6;
+ 23c:	82 e8       	ldi	r24, 0x82	; 130
+ 23e:	88 bb       	out	0x18, r24	; 24
+		break;
+ 240:	08 95       	ret
+		case 7:
+		PORTDisplay = DIGIT_7;
+ 242:	88 ef       	ldi	r24, 0xF8	; 248
+ 244:	88 bb       	out	0x18, r24	; 24
+		break;
+ 246:	08 95       	ret
+		case 8:
+		PORTDisplay = DIGIT_8;
+ 248:	80 e8       	ldi	r24, 0x80	; 128
+ 24a:	88 bb       	out	0x18, r24	; 24
+		break;
+ 24c:	08 95       	ret
+		case 9:
+		PORTDisplay = DIGIT_9;
+ 24e:	80 e9       	ldi	r24, 0x90	; 144
+ 250:	88 bb       	out	0x18, r24	; 24
+		break;
+ 252:	08 95       	ret
+		case Display_Off:
+		PORTDisplay = DSP_OFF;
+ 254:	8f ef       	ldi	r24, 0xFF	; 255
+ 256:	88 bb       	out	0x18, r24	; 24
+		
+		default:
+		PORTDisplay = CHAR_A;
+ 258:	81 e4       	ldi	r24, 0x41	; 65
+ 25a:	88 bb       	out	0x18, r24	; 24
+ 25c:	08 95       	ret
+
+0000025e <PutFlashDigit>:
+	
+}
+
+void PutFlashDigit(unsigned char digit)
+{
+	on_off_velocity ? selectDigit(digit) : selectDigit(DIGIT_OFF);
+ 25e:	90 91 89 01 	lds	r25, 0x0189	; 0x800189 <on_off_velocity>
+ 262:	99 23       	and	r25, r25
+ 264:	19 f0       	breq	.+6      	; 0x26c <PutFlashDigit+0xe>
+ 266:	0e 94 03 01 	call	0x206	; 0x206 <_Z11selectDigith>
+ 26a:	08 95       	ret
+ 26c:	8b e0       	ldi	r24, 0x0B	; 11
+ 26e:	0e 94 03 01 	call	0x206	; 0x206 <_Z11selectDigith>
+ 272:	08 95       	ret
+
+00000274 <PutDigit>:
+}
+
+
+void PutDigit(unsigned char digit)
+{
+	selectDigit(digit);
+ 274:	0e 94 03 01 	call	0x206	; 0x206 <_Z11selectDigith>
+ 278:	08 95       	ret
+
+0000027a <_ZN12HandleChaser10DisplayOutEhh>:
+HandleChaser::HandleChaser() {}
+
+
+void HandleChaser::DisplayOut(uint8_t KindOfDisplay, uint8_t Digit){
+	
+	switch(KindOfDisplay)
+ 27a:	62 30       	cpi	r22, 0x02	; 2
+ 27c:	41 f0       	breq	.+16     	; 0x28e <_ZN12HandleChaser10DisplayOutEhh+0x14>
+ 27e:	63 30       	cpi	r22, 0x03	; 3
+ 280:	51 f0       	breq	.+20     	; 0x296 <_ZN12HandleChaser10DisplayOutEhh+0x1c>
+ 282:	61 30       	cpi	r22, 0x01	; 1
+ 284:	59 f4       	brne	.+22     	; 0x29c <_ZN12HandleChaser10DisplayOutEhh+0x22>
+	{
+		case PROGRAM:
+			PutDigit(Digit);
+ 286:	84 2f       	mov	r24, r20
+ 288:	0e 94 3a 01 	call	0x274	; 0x274 <PutDigit>
+			break;
+ 28c:	08 95       	ret
+		case VELOCITY:
+			PutFlashDigit(Digit);
+ 28e:	84 2f       	mov	r24, r20
+ 290:	0e 94 2f 01 	call	0x25e	; 0x25e <PutFlashDigit>
+			break;
+ 294:	08 95       	ret
+		case INIT:
+			PutDigit(Digit);
+ 296:	84 2f       	mov	r24, r20
+ 298:	0e 94 3a 01 	call	0x274	; 0x274 <PutDigit>
+ 29c:	08 95       	ret
+
+0000029e <_ZN12HandleChaser11SetVelocityEh>:
+}
+
+
+void HandleChaser::SetVelocity(uint8_t velocity)
+{
+		switch(velocity)
+ 29e:	86 2f       	mov	r24, r22
+ 2a0:	90 e0       	ldi	r25, 0x00	; 0
+ 2a2:	fc 01       	movw	r30, r24
+ 2a4:	31 97       	sbiw	r30, 0x01	; 1
+ 2a6:	e9 30       	cpi	r30, 0x09	; 9
+ 2a8:	f1 05       	cpc	r31, r1
+ 2aa:	38 f5       	brcc	.+78     	; 0x2fa <_ZN12HandleChaser11SetVelocityEh+0x5c>
+ 2ac:	ea 5c       	subi	r30, 0xCA	; 202
+ 2ae:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2b0:	0c 94 46 04 	jmp	0x88c	; 0x88c <__tablejump2__>
+		{
+			case 1:
+			velocity_value = VEL1;
+ 2b4:	88 e1       	ldi	r24, 0x18	; 24
+ 2b6:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2ba:	08 95       	ret
+			case 2:
+			velocity_value = VEL2;
+ 2bc:	84 e1       	ldi	r24, 0x14	; 20
+ 2be:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2c2:	08 95       	ret
+			case 3:
+			velocity_value = VEL3;
+ 2c4:	8d e0       	ldi	r24, 0x0D	; 13
+ 2c6:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2ca:	08 95       	ret
+			case 4:
+			velocity_value = VEL4;
+ 2cc:	8b e0       	ldi	r24, 0x0B	; 11
+ 2ce:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2d2:	08 95       	ret
+			case 5:
+			velocity_value = VEL5;
+ 2d4:	87 e0       	ldi	r24, 0x07	; 7
+ 2d6:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2da:	08 95       	ret
+			case 6:
+			velocity_value = VEL6;
+ 2dc:	85 e0       	ldi	r24, 0x05	; 5
+ 2de:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2e2:	08 95       	ret
+			case 7:
+			velocity_value = VEL7;
+ 2e4:	83 e0       	ldi	r24, 0x03	; 3
+ 2e6:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2ea:	08 95       	ret
+			case 8:
+			velocity_value = VEL8;
+ 2ec:	82 e0       	ldi	r24, 0x02	; 2
+ 2ee:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 2f2:	08 95       	ret
+			case 9:
+			velocity_value = VEL9;
+ 2f4:	81 e0       	ldi	r24, 0x01	; 1
+ 2f6:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+ 2fa:	08 95       	ret
+
+000002fc <_ZN12HandleChaser12SignalLedOutEh>:
+		}
+	
+}
+
+
+void HandleChaser::SignalLedOut(uint8_t step){			
+ 2fc:	86 2f       	mov	r24, r22
+	
+	putSignalLed(step);	
+ 2fe:	0e 94 2a 02 	call	0x454	; 0x454 <putSignalLed>
+ 302:	08 95       	ret
+
+00000304 <_ZN12HandleChaser10SaveEepromEhh>:
+		
+}
+
+void HandleChaser::SaveEeprom(uint8_t addres, uint8_t data){	
+ 304:	86 2f       	mov	r24, r22
+	 
+eeprom_write_byte((uint8_t*)(uintptr_t)addres,data);	
+ 306:	64 2f       	mov	r22, r20
+ 308:	90 e0       	ldi	r25, 0x00	; 0
+ 30a:	0e 94 54 04 	call	0x8a8	; 0x8a8 <eeprom_write_byte>
+ 30e:	08 95       	ret
+
+00000310 <_ZN12HandleChaser10ReadEepromEh>:
+	
+}
+
+uint8_t HandleChaser::ReadEeprom(uint8_t addres){
+	
+	uint8_t readed_value = eeprom_read_byte((uint8_t*)(uintptr_t)addres);	
+ 310:	86 2f       	mov	r24, r22
+ 312:	90 e0       	ldi	r25, 0x00	; 0
+ 314:	0e 94 4c 04 	call	0x898	; 0x898 <eeprom_read_byte>
+	return readed_value;
+	
+}
+ 318:	08 95       	ret
+
+0000031a <_ZN12HandleChaser11invert_bitsEh>:
+	
+uint8_t HandleChaser::invert_bits(uint8_t byte) {
+	
+	uint8_t result = 0;
+	int i;
+	for (i = 0; i < 8; i++) {
+ 31a:	20 e0       	ldi	r18, 0x00	; 0
+ 31c:	30 e0       	ldi	r19, 0x00	; 0
+	
+}
+	
+uint8_t HandleChaser::invert_bits(uint8_t byte) {
+	
+	uint8_t result = 0;
+ 31e:	80 e0       	ldi	r24, 0x00	; 0
+	int i;
+	for (i = 0; i < 8; i++) {
+ 320:	28 30       	cpi	r18, 0x08	; 8
+ 322:	31 05       	cpc	r19, r1
+ 324:	54 f4       	brge	.+20     	; 0x33a <_ZN12HandleChaser11invert_bitsEh+0x20>
+		result <<= 1;
+ 326:	88 0f       	add	r24, r24
+		result |= byte & 0x01;
+ 328:	96 2f       	mov	r25, r22
+ 32a:	91 70       	andi	r25, 0x01	; 1
+ 32c:	89 2b       	or	r24, r25
+		byte >>= 1;
+ 32e:	70 e0       	ldi	r23, 0x00	; 0
+ 330:	75 95       	asr	r23
+ 332:	67 95       	ror	r22
+	
+uint8_t HandleChaser::invert_bits(uint8_t byte) {
+	
+	uint8_t result = 0;
+	int i;
+	for (i = 0; i < 8; i++) {
+ 334:	2f 5f       	subi	r18, 0xFF	; 255
+ 336:	3f 4f       	sbci	r19, 0xFF	; 255
+ 338:	f3 cf       	rjmp	.-26     	; 0x320 <_ZN12HandleChaser11invert_bitsEh+0x6>
+		result <<= 1;
+		result |= byte & 0x01;
+		byte >>= 1;
+	}
+	return result;
+}
+ 33a:	08 95       	ret
+
+0000033c <_ZN12HandleChaser14putSignalPowerEh>:
+}
+
+
+void HandleChaser::putSignalPower(uint8_t step){
+		
+	uint8_t inverted_step = invert_bits(step);	
+ 33c:	0e 94 8d 01 	call	0x31a	; 0x31a <_ZN12HandleChaser11invert_bitsEh>
+	PORTSignals = inverted_step;	
+ 340:	8b bb       	out	0x1b, r24	; 27
+ 342:	08 95       	ret
+
+00000344 <_ZN12HandleChaser14PowerSignalOutEh>:
+	
+}
+
+void HandleChaser::PowerSignalOut(uint8_t step){
+	
+	putSignalPower(step);
+ 344:	0e 94 9e 01 	call	0x33c	; 0x33c <_ZN12HandleChaser14putSignalPowerEh>
+ 348:	08 95       	ret
+
+0000034a <_ZN7InitsysC1Ev>:
+#include "initsys.h"
+}
+
+uint8_t outConfig;
+
+Initsys::Initsys() {}
+ 34a:	08 95       	ret
+
+0000034c <_ZN7Initsys15InitPortDisplayEv>:
+    InitTimer();
+}
+
+void Initsys::InitPortDisplay()
+{
+	PORTDisplay=0;
+ 34c:	18 ba       	out	0x18, r1	; 24
+    DDRDisplay = 0b11111111;
+ 34e:	8f ef       	ldi	r24, 0xFF	; 255
+ 350:	87 bb       	out	0x17, r24	; 23
+ 352:	08 95       	ret
+
+00000354 <_ZN7Initsys26InitButtonsAndTypeSelectorEv>:
+}
+
+void Initsys::InitButtonsAndTypeSelector()
+{
+    PORTButtons = 0x0;
+ 354:	12 ba       	out	0x12, r1	; 18
+	
+    DDRButtons &= 0b00000000;
+ 356:	81 b3       	in	r24, 0x11	; 17
+ 358:	11 ba       	out	0x11, r1	; 17
+    DDRTypeSelector &= 0b11111100;
+ 35a:	81 b3       	in	r24, 0x11	; 17
+ 35c:	8c 7f       	andi	r24, 0xFC	; 252
+ 35e:	81 bb       	out	0x11, r24	; 17
+	
+	PORTTypeSelector |= (1 << PD0);
+ 360:	82 b3       	in	r24, 0x12	; 18
+ 362:	81 60       	ori	r24, 0x01	; 1
+ 364:	82 bb       	out	0x12, r24	; 18
+	PORTTypeSelector |= (1 << PD1);
+ 366:	82 b3       	in	r24, 0x12	; 18
+ 368:	82 60       	ori	r24, 0x02	; 2
+ 36a:	82 bb       	out	0x12, r24	; 18
+	PORTButtons |= (1 << PD2);
+ 36c:	82 b3       	in	r24, 0x12	; 18
+ 36e:	84 60       	ori	r24, 0x04	; 4
+ 370:	82 bb       	out	0x12, r24	; 18
+	PORTButtons |= (1 << PD5);
+ 372:	82 b3       	in	r24, 0x12	; 18
+ 374:	80 62       	ori	r24, 0x20	; 32
+ 376:	82 bb       	out	0x12, r24	; 18
+ 378:	08 95       	ret
+
+0000037a <_ZN7Initsys17InitSignalOutputsEv>:
+	
+}
+
+void Initsys::InitSignalOutputs()
+{
+    PORTSignals = 0xFF;
+ 37a:	8f ef       	ldi	r24, 0xFF	; 255
+ 37c:	8b bb       	out	0x1b, r24	; 27
+    DDRSignals = 0b11111111;
+ 37e:	8a bb       	out	0x1a, r24	; 26
+ 380:	08 95       	ret
+
+00000382 <_ZN7Initsys14InitSignalLedsEv>:
+}
+
+void Initsys::InitSignalLeds()
+{
+    PORTLEDSignals = 0x0;
+ 382:	15 ba       	out	0x15, r1	; 21
+    DDRLeds = 0b11111111;
+ 384:	8f ef       	ldi	r24, 0xFF	; 255
+ 386:	84 bb       	out	0x14, r24	; 20
+ 388:	08 95       	ret
+
+0000038a <_ZN7Initsys9InitTimerEv>:
+
+
+
+void Initsys::InitTimer()
+{
+    cli();
+ 38a:	f8 94       	cli
+    // Configurar Timer 1 para generar interrupción cada octavo de segundo
+    TCCR1B |= (1 << WGM12); // Modo CTC
+ 38c:	8e b5       	in	r24, 0x2e	; 46
+ 38e:	88 60       	ori	r24, 0x08	; 8
+ 390:	8e bd       	out	0x2e, r24	; 46
+    // TCCR1B configurado para intewrumpir cada 1024 ciclos de reloj (1/16MHz)*1024 = 64us
+    TCCR1B |= (1 << CS12) | (1 << CS10);
+ 392:	8e b5       	in	r24, 0x2e	; 46
+ 394:	85 60       	ori	r24, 0x05	; 5
+ 396:	8e bd       	out	0x2e, r24	; 46
+    // contar un octavo de segundo 1/8 = 0.125s = 125ms = 125000us = 125000/64 = 1953.125
+    OCR1A = 1953;
+ 398:	81 ea       	ldi	r24, 0xA1	; 161
+ 39a:	97 e0       	ldi	r25, 0x07	; 7
+ 39c:	9b bd       	out	0x2b, r25	; 43
+ 39e:	8a bd       	out	0x2a, r24	; 42
+    TIMSK |= (1 << OCIE1A); // Habilitar interrupción por comparación
+ 3a0:	89 b7       	in	r24, 0x39	; 57
+ 3a2:	80 61       	ori	r24, 0x10	; 16
+ 3a4:	89 bf       	out	0x39, r24	; 57
+	
+	// Configurar Timer 0 para generar interrupción cada 100 milisegundos
+	TCCR0 = 0;              // Configurar Timer 0 en modo normal
+ 3a6:	13 be       	out	0x33, r1	; 51
+	TCCR0 |= (1 << CS02) | (1 << CS00); // Preescalador de 1024
+ 3a8:	83 b7       	in	r24, 0x33	; 51
+ 3aa:	85 60       	ori	r24, 0x05	; 5
+ 3ac:	83 bf       	out	0x33, r24	; 51
+	// Para que el Timer0 interrumpa cada 100ms:
+	// Frecuencia del clock / (Preescalador * Frecuencia de interrupción) - 1
+	// 16MHz / (1024 * 10Hz) - 1 = 156
+	OCR0 = 156;             // Valor de comparación para interrupción
+ 3ae:	8c e9       	ldi	r24, 0x9C	; 156
+ 3b0:	8c bf       	out	0x3c, r24	; 60
+	TIMSK |= (1 << OCIE0);  // Habilitar interrupción por comparación	
+ 3b2:	89 b7       	in	r24, 0x39	; 57
+ 3b4:	82 60       	ori	r24, 0x02	; 2
+ 3b6:	89 bf       	out	0x39, r24	; 57
+	
+    sei();                  // Habilitar interrupciones globales
+ 3b8:	78 94       	sei
+ 3ba:	08 95       	ret
+
+000003bc <_ZN7Initsys7initAllEv>:
+uint8_t outConfig;
+
+Initsys::Initsys() {}
+
+void Initsys::initAll()
+{
+ 3bc:	cf 93       	push	r28
+ 3be:	df 93       	push	r29
+ 3c0:	ec 01       	movw	r28, r24
+    InitPortDisplay();
+ 3c2:	0e 94 a6 01 	call	0x34c	; 0x34c <_ZN7Initsys15InitPortDisplayEv>
+    InitButtonsAndTypeSelector();
+ 3c6:	ce 01       	movw	r24, r28
+ 3c8:	0e 94 aa 01 	call	0x354	; 0x354 <_ZN7Initsys26InitButtonsAndTypeSelectorEv>
+    InitSignalOutputs();
+ 3cc:	ce 01       	movw	r24, r28
+ 3ce:	0e 94 bd 01 	call	0x37a	; 0x37a <_ZN7Initsys17InitSignalOutputsEv>
+    InitSignalLeds();
+ 3d2:	ce 01       	movw	r24, r28
+ 3d4:	0e 94 c1 01 	call	0x382	; 0x382 <_ZN7Initsys14InitSignalLedsEv>
+    InitTimer();
+ 3d8:	ce 01       	movw	r24, r28
+ 3da:	0e 94 c5 01 	call	0x38a	; 0x38a <_ZN7Initsys9InitTimerEv>
+}
+ 3de:	df 91       	pop	r29
+ 3e0:	cf 91       	pop	r28
+ 3e2:	08 95       	ret
+
+000003e4 <_ZN7Initsys22ConfigureChaserOutputsEv>:
+	
+		uint8_t out4;
+		uint8_t out8;
+		
+		
+		out4 = (PIND & 0x1);
+ 3e4:	80 b3       	in	r24, 0x10	; 16
+ 3e6:	81 70       	andi	r24, 0x01	; 1
+		out8 = (PIND & 0x2);
+ 3e8:	90 b3       	in	r25, 0x10	; 16
+		
+		
+		if(out8==0x2 && out4 == 0x0)
+ 3ea:	29 2f       	mov	r18, r25
+ 3ec:	22 70       	andi	r18, 0x02	; 2
+ 3ee:	91 ff       	sbrs	r25, 1
+ 3f0:	06 c0       	rjmp	.+12     	; 0x3fe <_ZN7Initsys22ConfigureChaserOutputsEv+0x1a>
+ 3f2:	81 11       	cpse	r24, r1
+ 3f4:	04 c0       	rjmp	.+8      	; 0x3fe <_ZN7Initsys22ConfigureChaserOutputsEv+0x1a>
+		outConfig = 8;		
+ 3f6:	88 e0       	ldi	r24, 0x08	; 8
+ 3f8:	80 93 84 01 	sts	0x0184, r24	; 0x800184 <outConfig>
+ 3fc:	08 95       	ret
+		else if(out4==0x1 && out8 == 0x0)
+ 3fe:	81 30       	cpi	r24, 0x01	; 1
+ 400:	31 f4       	brne	.+12     	; 0x40e <__EEPROM_REGION_LENGTH__+0xe>
+ 402:	21 11       	cpse	r18, r1
+ 404:	04 c0       	rjmp	.+8      	; 0x40e <__EEPROM_REGION_LENGTH__+0xe>
+		outConfig = 4;
+ 406:	84 e0       	ldi	r24, 0x04	; 4
+ 408:	80 93 84 01 	sts	0x0184, r24	; 0x800184 <outConfig>
+ 40c:	08 95       	ret
+		
+		else{ /*if(out4 == 0x0 && out8 == 0x0)*/
+		PORTDisplay= CHAR_E;
+ 40e:	86 e8       	ldi	r24, 0x86	; 134
+ 410:	88 bb       	out	0x18, r24	; 24
+		PORTLEDSignals = 0x0;
+ 412:	15 ba       	out	0x15, r1	; 21
+		PORTSignals = 0x0;
+ 414:	1b ba       	out	0x1b, r1	; 27
+		while(1){
+			PORTDisplay= CHAR_E;
+ 416:	86 e8       	ldi	r24, 0x86	; 134
+ 418:	88 bb       	out	0x18, r24	; 24
+			PORTLEDSignals = 0x0;
+ 41a:	15 ba       	out	0x15, r1	; 21
+			PORTSignals = 0x0;
+ 41c:	1b ba       	out	0x1b, r1	; 27
+ 41e:	fb cf       	rjmp	.-10     	; 0x416 <__EEPROM_REGION_LENGTH__+0x16>
+
+00000420 <main>:
+}
+
+
+
+int main(void)
+{
+ 420:	cf 93       	push	r28
+ 422:	df 93       	push	r29
+ 424:	1f 92       	push	r1
+ 426:	cd b7       	in	r28, 0x3d	; 61
+ 428:	de b7       	in	r29, 0x3e	; 62
+	Initsys Sys;
+ 42a:	ce 01       	movw	r24, r28
+ 42c:	01 96       	adiw	r24, 0x01	; 1
+ 42e:	0e 94 a5 01 	call	0x34a	; 0x34a <_ZN7InitsysC1Ev>
+	Sys.initAll();		
+ 432:	ce 01       	movw	r24, r28
+ 434:	01 96       	adiw	r24, 0x01	; 1
+ 436:	0e 94 de 01 	call	0x3bc	; 0x3bc <_ZN7Initsys7initAllEv>
+	Sys.ConfigureChaserOutputs();	
+ 43a:	ce 01       	movw	r24, r28
+ 43c:	01 96       	adiw	r24, 0x01	; 1
+ 43e:	0e 94 f2 01 	call	0x3e4	; 0x3e4 <_ZN7Initsys22ConfigureChaserOutputsEv>
+		
+	has_changed = INIT;
+ 442:	83 e0       	ldi	r24, 0x03	; 3
+ 444:	90 e0       	ldi	r25, 0x00	; 0
+ 446:	90 93 8e 01 	sts	0x018E, r25	; 0x80018e <has_changed+0x1>
+ 44a:	80 93 8d 01 	sts	0x018D, r24	; 0x80018d <has_changed>
+	//Handler.DisplayOut(INIT, 1);
+	
+	while (1)
+	{	
+		check_buttons();			
+ 44e:	0e 94 7a 00 	call	0xf4	; 0xf4 <check_buttons>
+ 452:	fd cf       	rjmp	.-6      	; 0x44e <main+0x2e>
+
+00000454 <putSignalLed>:
+#include "signal_led.h"
+}
+
+void putSignalLed(uint8_t step)
+{
+	PORTLEDSignals = step;
+ 454:	85 bb       	out	0x15, r24	; 21
+ 456:	08 95       	ret
+
+00000458 <_Z14select_programh>:
+
+#define CONF4OUTS 4
+#define CONF8OUTS 8
+
+void select_program(uint8_t cnt)
+{	
+ 458:	e8 2f       	mov	r30, r24
+	
+	 switch(outConfig)
+ 45a:	80 91 84 01 	lds	r24, 0x0184	; 0x800184 <outConfig>
+ 45e:	84 30       	cpi	r24, 0x04	; 4
+ 460:	21 f0       	breq	.+8      	; 0x46a <_Z14select_programh+0x12>
+ 462:	88 30       	cpi	r24, 0x08	; 8
+ 464:	09 f4       	brne	.+2      	; 0x468 <_Z14select_programh+0x10>
+ 466:	71 c0       	rjmp	.+226    	; 0x54a <_Z14select_programh+0xf2>
+ 468:	08 95       	ret
+	 {
+		 
+	 case CONF4OUTS:  
+	
+			switch(cnt)
+ 46a:	8e 2f       	mov	r24, r30
+ 46c:	90 e0       	ldi	r25, 0x00	; 0
+ 46e:	fc 01       	movw	r30, r24
+ 470:	31 97       	sbiw	r30, 0x01	; 1
+ 472:	ea 30       	cpi	r30, 0x0A	; 10
+ 474:	f1 05       	cpc	r31, r1
+ 476:	08 f0       	brcs	.+2      	; 0x47a <_Z14select_programh+0x22>
+ 478:	cd c0       	rjmp	.+410    	; 0x614 <_Z14select_programh+0x1bc>
+ 47a:	e1 5c       	subi	r30, 0xC1	; 193
+ 47c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 47e:	0c 94 46 04 	jmp	0x88c	; 0x88c <__tablejump2__>
+			{
+				case 1:
+				actual = SAL4.uno;
+ 482:	8a e0       	ldi	r24, 0x0A	; 10
+ 484:	91 e0       	ldi	r25, 0x01	; 1
+ 486:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 48a:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL4.uno);
+ 48e:	8e e0       	ldi	r24, 0x0E	; 14
+ 490:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 494:	08 95       	ret
+				case 2:
+				actual = SAL4.dos;
+ 496:	88 e1       	ldi	r24, 0x18	; 24
+ 498:	91 e0       	ldi	r25, 0x01	; 1
+ 49a:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 49e:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL4.dos);
+ 4a2:	82 e1       	ldi	r24, 0x12	; 18
+ 4a4:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 4a8:	08 95       	ret
+				case 3:		
+				actual = SAL4.tres;
+ 4aa:	8a e2       	ldi	r24, 0x2A	; 42
+ 4ac:	91 e0       	ldi	r25, 0x01	; 1
+ 4ae:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 4b2:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.tres);
+ 4b6:	82 e0       	ldi	r24, 0x02	; 2
+ 4b8:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 4bc:	08 95       	ret
+				case 4:
+				actual = SAL4.cuatro;
+ 4be:	8c e2       	ldi	r24, 0x2C	; 44
+ 4c0:	91 e0       	ldi	r25, 0x01	; 1
+ 4c2:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 4c6:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.cuatro);
+ 4ca:	88 e0       	ldi	r24, 0x08	; 8
+ 4cc:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 4d0:	08 95       	ret
+				case 5:
+				actual = SAL4.cinco;
+ 4d2:	84 e3       	ldi	r24, 0x34	; 52
+ 4d4:	91 e0       	ldi	r25, 0x01	; 1
+ 4d6:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 4da:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.cinco);
+ 4de:	8d e0       	ldi	r24, 0x0D	; 13
+ 4e0:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 4e4:	08 95       	ret
+				case 6:
+				actual = SAL4.seis;
+ 4e6:	81 e4       	ldi	r24, 0x41	; 65
+ 4e8:	91 e0       	ldi	r25, 0x01	; 1
+ 4ea:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 4ee:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.seis);
+ 4f2:	82 e1       	ldi	r24, 0x12	; 18
+ 4f4:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 4f8:	08 95       	ret
+				case 7:
+				actual = SAL4.siete;
+ 4fa:	83 e5       	ldi	r24, 0x53	; 83
+ 4fc:	91 e0       	ldi	r25, 0x01	; 1
+ 4fe:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 502:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.siete);
+ 506:	88 e0       	ldi	r24, 0x08	; 8
+ 508:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 50c:	08 95       	ret
+				case 8:
+				actual = SAL4.ocho;
+ 50e:	8b e5       	ldi	r24, 0x5B	; 91
+ 510:	91 e0       	ldi	r25, 0x01	; 1
+ 512:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 516:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.ocho);
+ 51a:	87 e0       	ldi	r24, 0x07	; 7
+ 51c:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 520:	08 95       	ret
+				case 9:
+				actual = SAL4.nueve;
+ 522:	82 e6       	ldi	r24, 0x62	; 98
+ 524:	91 e0       	ldi	r25, 0x01	; 1
+ 526:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 52a:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.nueve);
+ 52e:	8f e0       	ldi	r24, 0x0F	; 15
+ 530:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 534:	08 95       	ret
+				case 10:
+				actual = SAL4.diez;
+ 536:	81 e7       	ldi	r24, 0x71	; 113
+ 538:	91 e0       	ldi	r25, 0x01	; 1
+ 53a:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 53e:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				 n_elements = sizeof(SAL4.diez);
+ 542:	8c e0       	ldi	r24, 0x0C	; 12
+ 544:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 548:	08 95       	ret
+ 			}
+		   break;
+		   
+	 case CONF8OUTS:
+			
+			switch(cnt)
+ 54a:	8e 2f       	mov	r24, r30
+ 54c:	90 e0       	ldi	r25, 0x00	; 0
+ 54e:	fc 01       	movw	r30, r24
+ 550:	31 97       	sbiw	r30, 0x01	; 1
+ 552:	e9 30       	cpi	r30, 0x09	; 9
+ 554:	f1 05       	cpc	r31, r1
+ 556:	08 f0       	brcs	.+2      	; 0x55a <_Z14select_programh+0x102>
+ 558:	5d c0       	rjmp	.+186    	; 0x614 <_Z14select_programh+0x1bc>
+ 55a:	e7 5b       	subi	r30, 0xB7	; 183
+ 55c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 55e:	0c 94 46 04 	jmp	0x88c	; 0x88c <__tablejump2__>
+			{
+				case 1:
+				actual = SAL8.uno;
+ 562:	80 e6       	ldi	r24, 0x60	; 96
+ 564:	90 e0       	ldi	r25, 0x00	; 0
+ 566:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 56a:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.uno);
+ 56e:	8f e1       	ldi	r24, 0x1F	; 31
+ 570:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 574:	08 95       	ret
+				case 2:
+				actual = SAL8.dos;
+ 576:	8f e7       	ldi	r24, 0x7F	; 127
+ 578:	90 e0       	ldi	r25, 0x00	; 0
+ 57a:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 57e:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.dos);
+ 582:	82 e1       	ldi	r24, 0x12	; 18
+ 584:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 588:	08 95       	ret
+				case 3:
+				actual = SAL8.tres;
+ 58a:	81 e9       	ldi	r24, 0x91	; 145
+ 58c:	90 e0       	ldi	r25, 0x00	; 0
+ 58e:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 592:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.tres);
+ 596:	8c e0       	ldi	r24, 0x0C	; 12
+ 598:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 59c:	08 95       	ret
+				case 4:
+				actual = SAL8.cuatro;
+ 59e:	8d e9       	ldi	r24, 0x9D	; 157
+ 5a0:	90 e0       	ldi	r25, 0x00	; 0
+ 5a2:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 5a6:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.cuatro);
+ 5aa:	8c e1       	ldi	r24, 0x1C	; 28
+ 5ac:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 5b0:	08 95       	ret
+				case 5:
+				actual = SAL8.cinco;
+ 5b2:	89 eb       	ldi	r24, 0xB9	; 185
+ 5b4:	90 e0       	ldi	r25, 0x00	; 0
+ 5b6:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 5ba:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.cinco);
+ 5be:	89 e0       	ldi	r24, 0x09	; 9
+ 5c0:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 5c4:	08 95       	ret
+				case 6:
+				actual = SAL8.seis;
+ 5c6:	82 ec       	ldi	r24, 0xC2	; 194
+ 5c8:	90 e0       	ldi	r25, 0x00	; 0
+ 5ca:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 5ce:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.seis);
+ 5d2:	80 e2       	ldi	r24, 0x20	; 32
+ 5d4:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 5d8:	08 95       	ret
+				case 7:
+				actual = SAL8.siete;
+ 5da:	82 ee       	ldi	r24, 0xE2	; 226
+ 5dc:	90 e0       	ldi	r25, 0x00	; 0
+ 5de:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 5e2:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.siete);
+ 5e6:	88 e0       	ldi	r24, 0x08	; 8
+ 5e8:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 5ec:	08 95       	ret
+				case 8:
+				actual = SAL8.ocho;
+ 5ee:	8a ee       	ldi	r24, 0xEA	; 234
+ 5f0:	90 e0       	ldi	r25, 0x00	; 0
+ 5f2:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 5f6:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.ocho);
+ 5fa:	83 e1       	ldi	r24, 0x13	; 19
+ 5fc:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+				break;
+ 600:	08 95       	ret
+				case 9:
+				actual = SAL8.nueve;
+ 602:	8d ef       	ldi	r24, 0xFD	; 253
+ 604:	90 e0       	ldi	r25, 0x00	; 0
+ 606:	90 93 86 01 	sts	0x0186, r25	; 0x800186 <actual+0x1>
+ 60a:	80 93 85 01 	sts	0x0185, r24	; 0x800185 <actual>
+				n_elements = sizeof(SAL8.nueve);
+ 60e:	8d e0       	ldi	r24, 0x0D	; 13
+ 610:	80 93 87 01 	sts	0x0187, r24	; 0x800187 <n_elements>
+ 614:	08 95       	ret
+
+00000616 <_Z15select_velocityh>:
+	 
+}
+
+void select_velocity(uint8_t vel)
+{
+	switch(vel)	
+ 616:	90 e0       	ldi	r25, 0x00	; 0
+ 618:	fc 01       	movw	r30, r24
+ 61a:	31 97       	sbiw	r30, 0x01	; 1
+ 61c:	e9 30       	cpi	r30, 0x09	; 9
+ 61e:	f1 05       	cpc	r31, r1
+ 620:	38 f5       	brcc	.+78     	; 0x670 <_Z15select_velocityh+0x5a>
+ 622:	ee 5a       	subi	r30, 0xAE	; 174
+ 624:	ff 4f       	sbci	r31, 0xFF	; 255
+ 626:	0c 94 46 04 	jmp	0x88c	; 0x88c <__tablejump2__>
+	{
+		case 1:
+			velocity_value = VEL1;
+ 62a:	88 e1       	ldi	r24, 0x18	; 24
+ 62c:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 630:	08 95       	ret
+		case 2:
+			velocity_value = VEL2;
+ 632:	84 e1       	ldi	r24, 0x14	; 20
+ 634:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 638:	08 95       	ret
+		case 3:
+			velocity_value = VEL3;
+ 63a:	8d e0       	ldi	r24, 0x0D	; 13
+ 63c:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 640:	08 95       	ret
+		case 4:
+			velocity_value = VEL4;
+ 642:	8b e0       	ldi	r24, 0x0B	; 11
+ 644:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 648:	08 95       	ret
+		case 5:
+			velocity_value = VEL5;
+ 64a:	87 e0       	ldi	r24, 0x07	; 7
+ 64c:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 650:	08 95       	ret
+		case 6:
+			velocity_value = VEL6;
+ 652:	85 e0       	ldi	r24, 0x05	; 5
+ 654:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 658:	08 95       	ret
+		case 7:
+			velocity_value = VEL7;
+ 65a:	83 e0       	ldi	r24, 0x03	; 3
+ 65c:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 660:	08 95       	ret
+		case 8:
+			velocity_value = VEL8;
+ 662:	82 e0       	ldi	r24, 0x02	; 2
+ 664:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+			break;
+ 668:	08 95       	ret
+		case 9:
+			velocity_value = VEL9;
+ 66a:	81 e0       	ldi	r24, 0x01	; 1
+ 66c:	80 93 8a 01 	sts	0x018A, r24	; 0x80018a <velocity_value>
+ 670:	08 95       	ret
+
+00000672 <__vector_7>:
+	}
+}
+
+//El timer 1 esta configurado para interrumpir cada 1/8 de segundo
+ISR(TIMER1_COMPA_vect)
+{
+ 672:	1f 92       	push	r1
+ 674:	0f 92       	push	r0
+ 676:	0f b6       	in	r0, 0x3f	; 63
+ 678:	0f 92       	push	r0
+ 67a:	11 24       	eor	r1, r1
+ 67c:	2f 93       	push	r18
+ 67e:	3f 93       	push	r19
+ 680:	4f 93       	push	r20
+ 682:	5f 93       	push	r21
+ 684:	6f 93       	push	r22
+ 686:	7f 93       	push	r23
+ 688:	8f 93       	push	r24
+ 68a:	9f 93       	push	r25
+ 68c:	af 93       	push	r26
+ 68e:	bf 93       	push	r27
+ 690:	cf 93       	push	r28
+ 692:	ef 93       	push	r30
+ 694:	ff 93       	push	r31
+	
+       time_counter++;
+ 696:	80 91 91 01 	lds	r24, 0x0191	; 0x800191 <time_counter>
+ 69a:	90 91 92 01 	lds	r25, 0x0192	; 0x800192 <time_counter+0x1>
+ 69e:	01 96       	adiw	r24, 0x01	; 1
+ 6a0:	90 93 92 01 	sts	0x0192, r25	; 0x800192 <time_counter+0x1>
+ 6a4:	80 93 91 01 	sts	0x0191, r24	; 0x800191 <time_counter>
+	  
+	
+	switch(has_changed)
+ 6a8:	80 91 8d 01 	lds	r24, 0x018D	; 0x80018d <has_changed>
+ 6ac:	90 91 8e 01 	lds	r25, 0x018E	; 0x80018e <has_changed+0x1>
+ 6b0:	82 30       	cpi	r24, 0x02	; 2
+ 6b2:	91 05       	cpc	r25, r1
+ 6b4:	99 f0       	breq	.+38     	; 0x6dc <__vector_7+0x6a>
+ 6b6:	83 30       	cpi	r24, 0x03	; 3
+ 6b8:	91 05       	cpc	r25, r1
+ 6ba:	e9 f0       	breq	.+58     	; 0x6f6 <__vector_7+0x84>
+ 6bc:	01 97       	sbiw	r24, 0x01	; 1
+ 6be:	09 f0       	breq	.+2      	; 0x6c2 <__vector_7+0x50>
+ 6c0:	47 c0       	rjmp	.+142    	; 0x750 <__vector_7+0xde>
+	{
+		case PROGRAM:
+			select_program(program_counter);
+ 6c2:	80 91 8c 01 	lds	r24, 0x018C	; 0x80018c <program_counter>
+ 6c6:	0e 94 2c 02 	call	0x458	; 0x458 <_Z14select_programh>
+			cambio= 0;		
+ 6ca:	10 92 90 01 	sts	0x0190, r1	; 0x800190 <cambio+0x1>
+ 6ce:	10 92 8f 01 	sts	0x018F, r1	; 0x80018f <cambio>
+			has_changed = false;
+ 6d2:	10 92 8e 01 	sts	0x018E, r1	; 0x80018e <has_changed+0x1>
+ 6d6:	10 92 8d 01 	sts	0x018D, r1	; 0x80018d <has_changed>
+			break;
+ 6da:	3a c0       	rjmp	.+116    	; 0x750 <__vector_7+0xde>
+		
+		case VELOCITY:
+		    time_counter = 0;
+ 6dc:	10 92 92 01 	sts	0x0192, r1	; 0x800192 <time_counter+0x1>
+ 6e0:	10 92 91 01 	sts	0x0191, r1	; 0x800191 <time_counter>
+			select_velocity(velocity_counter);		
+ 6e4:	80 91 8b 01 	lds	r24, 0x018B	; 0x80018b <velocity_counter>
+ 6e8:	0e 94 0b 03 	call	0x616	; 0x616 <_Z15select_velocityh>
+			has_changed = false;
+ 6ec:	10 92 8e 01 	sts	0x018E, r1	; 0x80018e <has_changed+0x1>
+ 6f0:	10 92 8d 01 	sts	0x018D, r1	; 0x80018d <has_changed>
+		break;
+ 6f4:	2d c0       	rjmp	.+90     	; 0x750 <__vector_7+0xde>
+		
+		case INIT:
+			time_counter=0;
+ 6f6:	10 92 92 01 	sts	0x0192, r1	; 0x800192 <time_counter+0x1>
+ 6fa:	10 92 91 01 	sts	0x0191, r1	; 0x800191 <time_counter>
+			cambio=0;
+ 6fe:	10 92 90 01 	sts	0x0190, r1	; 0x800190 <cambio+0x1>
+ 702:	10 92 8f 01 	sts	0x018F, r1	; 0x80018f <cambio>
+			
+			uint8_t read_vel = Handler.ReadEeprom(EE_SPEED);
+ 706:	61 e0       	ldi	r22, 0x01	; 1
+ 708:	83 e8       	ldi	r24, 0x83	; 131
+ 70a:	91 e0       	ldi	r25, 0x01	; 1
+ 70c:	0e 94 88 01 	call	0x310	; 0x310 <_ZN12HandleChaser10ReadEepromEh>
+ 710:	c8 2f       	mov	r28, r24
+			velocity_counter = read_vel;
+ 712:	80 93 8b 01 	sts	0x018B, r24	; 0x80018b <velocity_counter>
+			select_velocity(read_vel);
+ 716:	0e 94 0b 03 	call	0x616	; 0x616 <_Z15select_velocityh>
+			Handler.DisplayOut(VELOCITY,read_vel);
+ 71a:	4c 2f       	mov	r20, r28
+ 71c:	62 e0       	ldi	r22, 0x02	; 2
+ 71e:	83 e8       	ldi	r24, 0x83	; 131
+ 720:	91 e0       	ldi	r25, 0x01	; 1
+ 722:	0e 94 3d 01 	call	0x27a	; 0x27a <_ZN12HandleChaser10DisplayOutEhh>
+			
+			
+			
+			uint8_t read_prg = Handler.ReadEeprom(EE_PROGRAM);			
+ 726:	60 e0       	ldi	r22, 0x00	; 0
+ 728:	83 e8       	ldi	r24, 0x83	; 131
+ 72a:	91 e0       	ldi	r25, 0x01	; 1
+ 72c:	0e 94 88 01 	call	0x310	; 0x310 <_ZN12HandleChaser10ReadEepromEh>
+ 730:	c8 2f       	mov	r28, r24
+			program_counter= read_prg;
+ 732:	80 93 8c 01 	sts	0x018C, r24	; 0x80018c <program_counter>
+			Handler.DisplayOut(PROGRAM,read_prg);
+ 736:	48 2f       	mov	r20, r24
+ 738:	61 e0       	ldi	r22, 0x01	; 1
+ 73a:	83 e8       	ldi	r24, 0x83	; 131
+ 73c:	91 e0       	ldi	r25, 0x01	; 1
+ 73e:	0e 94 3d 01 	call	0x27a	; 0x27a <_ZN12HandleChaser10DisplayOutEhh>
+			select_program(read_prg);
+ 742:	8c 2f       	mov	r24, r28
+ 744:	0e 94 2c 02 	call	0x458	; 0x458 <_Z14select_programh>
+			
+			
+			has_changed=false;
+ 748:	10 92 8e 01 	sts	0x018E, r1	; 0x80018e <has_changed+0x1>
+ 74c:	10 92 8d 01 	sts	0x018D, r1	; 0x80018d <has_changed>
+		break;	
+	}	
+	
+	
+	   if(time_counter >= velocity_value)   
+ 750:	80 91 8a 01 	lds	r24, 0x018A	; 0x80018a <velocity_value>
+ 754:	90 e0       	ldi	r25, 0x00	; 0
+ 756:	20 91 91 01 	lds	r18, 0x0191	; 0x800191 <time_counter>
+ 75a:	30 91 92 01 	lds	r19, 0x0192	; 0x800192 <time_counter+0x1>
+ 75e:	28 17       	cp	r18, r24
+ 760:	39 07       	cpc	r19, r25
+ 762:	0c f4       	brge	.+2      	; 0x766 <__vector_7+0xf4>
+ 764:	40 c0       	rjmp	.+128    	; 0x7e6 <__vector_7+0x174>
+	   {
+			   time_counter=0;
+ 766:	10 92 92 01 	sts	0x0192, r1	; 0x800192 <time_counter+0x1>
+ 76a:	10 92 91 01 	sts	0x0191, r1	; 0x800191 <time_counter>
+			   cambio++;
+ 76e:	80 91 8f 01 	lds	r24, 0x018F	; 0x80018f <cambio>
+ 772:	90 91 90 01 	lds	r25, 0x0190	; 0x800190 <cambio+0x1>
+ 776:	01 96       	adiw	r24, 0x01	; 1
+ 778:	90 93 90 01 	sts	0x0190, r25	; 0x800190 <cambio+0x1>
+ 77c:	80 93 8f 01 	sts	0x018F, r24	; 0x80018f <cambio>
+			   
+			   if(cambio <= n_elements-1)
+ 780:	20 91 87 01 	lds	r18, 0x0187	; 0x800187 <n_elements>
+ 784:	30 e0       	ldi	r19, 0x00	; 0
+ 786:	21 50       	subi	r18, 0x01	; 1
+ 788:	31 09       	sbc	r19, r1
+ 78a:	28 17       	cp	r18, r24
+ 78c:	39 07       	cpc	r19, r25
+ 78e:	a4 f0       	brlt	.+40     	; 0x7b8 <__vector_7+0x146>
+			   {	
+				   uint8_t Actual = actual[cambio-1];    			   
+ 790:	e0 91 85 01 	lds	r30, 0x0185	; 0x800185 <actual>
+ 794:	f0 91 86 01 	lds	r31, 0x0186	; 0x800186 <actual+0x1>
+ 798:	8e 0f       	add	r24, r30
+ 79a:	9f 1f       	adc	r25, r31
+ 79c:	fc 01       	movw	r30, r24
+ 79e:	31 97       	sbiw	r30, 0x01	; 1
+ 7a0:	c0 81       	ld	r28, Z
+				   Handler.SignalLedOut(Actual);
+ 7a2:	6c 2f       	mov	r22, r28
+ 7a4:	83 e8       	ldi	r24, 0x83	; 131
+ 7a6:	91 e0       	ldi	r25, 0x01	; 1
+ 7a8:	0e 94 7e 01 	call	0x2fc	; 0x2fc <_ZN12HandleChaser12SignalLedOutEh>
+				   Handler.PowerSignalOut(Actual);
+ 7ac:	6c 2f       	mov	r22, r28
+ 7ae:	83 e8       	ldi	r24, 0x83	; 131
+ 7b0:	91 e0       	ldi	r25, 0x01	; 1
+ 7b2:	0e 94 a2 01 	call	0x344	; 0x344 <_ZN12HandleChaser14PowerSignalOutEh>
+ 7b6:	17 c0       	rjmp	.+46     	; 0x7e6 <__vector_7+0x174>
+			   }
+			   else
+			   {
+				   uint8_t Actual = actual[cambio-1];
+ 7b8:	e0 91 85 01 	lds	r30, 0x0185	; 0x800185 <actual>
+ 7bc:	f0 91 86 01 	lds	r31, 0x0186	; 0x800186 <actual+0x1>
+ 7c0:	8e 0f       	add	r24, r30
+ 7c2:	9f 1f       	adc	r25, r31
+ 7c4:	fc 01       	movw	r30, r24
+ 7c6:	31 97       	sbiw	r30, 0x01	; 1
+ 7c8:	c0 81       	ld	r28, Z
+				   Handler.SignalLedOut(Actual);
+ 7ca:	6c 2f       	mov	r22, r28
+ 7cc:	83 e8       	ldi	r24, 0x83	; 131
+ 7ce:	91 e0       	ldi	r25, 0x01	; 1
+ 7d0:	0e 94 7e 01 	call	0x2fc	; 0x2fc <_ZN12HandleChaser12SignalLedOutEh>
+				   Handler.PowerSignalOut(Actual);
+ 7d4:	6c 2f       	mov	r22, r28
+ 7d6:	83 e8       	ldi	r24, 0x83	; 131
+ 7d8:	91 e0       	ldi	r25, 0x01	; 1
+ 7da:	0e 94 a2 01 	call	0x344	; 0x344 <_ZN12HandleChaser14PowerSignalOutEh>
+				   cambio = 0;
+ 7de:	10 92 90 01 	sts	0x0190, r1	; 0x800190 <cambio+0x1>
+ 7e2:	10 92 8f 01 	sts	0x018F, r1	; 0x80018f <cambio>
+			   }	
+			   
+	   }       
+	    
+	   
+}
+ 7e6:	ff 91       	pop	r31
+ 7e8:	ef 91       	pop	r30
+ 7ea:	cf 91       	pop	r28
+ 7ec:	bf 91       	pop	r27
+ 7ee:	af 91       	pop	r26
+ 7f0:	9f 91       	pop	r25
+ 7f2:	8f 91       	pop	r24
+ 7f4:	7f 91       	pop	r23
+ 7f6:	6f 91       	pop	r22
+ 7f8:	5f 91       	pop	r21
+ 7fa:	4f 91       	pop	r20
+ 7fc:	3f 91       	pop	r19
+ 7fe:	2f 91       	pop	r18
+ 800:	0f 90       	pop	r0
+ 802:	0f be       	out	0x3f, r0	; 63
+ 804:	0f 90       	pop	r0
+ 806:	1f 90       	pop	r1
+ 808:	18 95       	reti
+
+0000080a <__vector_10>:
+
+ISR(TIMER0_COMP_vect)
+{	
+ 80a:	1f 92       	push	r1
+ 80c:	0f 92       	push	r0
+ 80e:	0f b6       	in	r0, 0x3f	; 63
+ 810:	0f 92       	push	r0
+ 812:	11 24       	eor	r1, r1
+ 814:	2f 93       	push	r18
+ 816:	3f 93       	push	r19
+ 818:	4f 93       	push	r20
+ 81a:	5f 93       	push	r21
+ 81c:	6f 93       	push	r22
+ 81e:	7f 93       	push	r23
+ 820:	8f 93       	push	r24
+ 822:	9f 93       	push	r25
+ 824:	af 93       	push	r26
+ 826:	bf 93       	push	r27
+ 828:	ef 93       	push	r30
+ 82a:	ff 93       	push	r31
+	
+	blink_time++; // Incrementar el contador de interrupciones
+ 82c:	80 91 88 01 	lds	r24, 0x0188	; 0x800188 <blink_time>
+ 830:	8f 5f       	subi	r24, 0xFF	; 255
+ 832:	80 93 88 01 	sts	0x0188, r24	; 0x800188 <blink_time>
+	if (blink_time == 3) // Si han pasado 300 milisegundos (30 * 10ms)
+ 836:	83 30       	cpi	r24, 0x03	; 3
+ 838:	c1 f4       	brne	.+48     	; 0x86a <__stack+0xb>
+	{
+		if (displaying_velocity==true)
+ 83a:	80 91 7e 01 	lds	r24, 0x017E	; 0x80017e <__data_end>
+ 83e:	81 30       	cpi	r24, 0x01	; 1
+ 840:	91 f4       	brne	.+36     	; 0x866 <__stack+0x7>
+		{
+			
+			on_off_velocity = on_off_velocity ? false: true;
+ 842:	90 91 89 01 	lds	r25, 0x0189	; 0x800189 <on_off_velocity>
+ 846:	91 11       	cpse	r25, r1
+ 848:	80 e0       	ldi	r24, 0x00	; 0
+ 84a:	80 93 89 01 	sts	0x0189, r24	; 0x800189 <on_off_velocity>
+			
+			if(on_off_velocity == true)
+ 84e:	81 30       	cpi	r24, 0x01	; 1
+ 850:	41 f4       	brne	.+16     	; 0x862 <__stack+0x3>
+			Handler.DisplayOut(VELOCITY, velocity_counter);
+ 852:	40 91 8b 01 	lds	r20, 0x018B	; 0x80018b <velocity_counter>
+ 856:	62 e0       	ldi	r22, 0x02	; 2
+ 858:	83 e8       	ldi	r24, 0x83	; 131
+ 85a:	91 e0       	ldi	r25, 0x01	; 1
+ 85c:	0e 94 3d 01 	call	0x27a	; 0x27a <_ZN12HandleChaser10DisplayOutEhh>
+ 860:	02 c0       	rjmp	.+4      	; 0x866 <__stack+0x7>
+			else
+			PORTDisplay = DSP_OFF;
+ 862:	8f ef       	ldi	r24, 0xFF	; 255
+ 864:	88 bb       	out	0x18, r24	; 24
+			
+		}				
+		
+		blink_time = 0; // Reiniciar el contador
+ 866:	10 92 88 01 	sts	0x0188, r1	; 0x800188 <blink_time>
+	}
+	
+	
+}
+ 86a:	ff 91       	pop	r31
+ 86c:	ef 91       	pop	r30
+ 86e:	bf 91       	pop	r27
+ 870:	af 91       	pop	r26
+ 872:	9f 91       	pop	r25
+ 874:	8f 91       	pop	r24
+ 876:	7f 91       	pop	r23
+ 878:	6f 91       	pop	r22
+ 87a:	5f 91       	pop	r21
+ 87c:	4f 91       	pop	r20
+ 87e:	3f 91       	pop	r19
+ 880:	2f 91       	pop	r18
+ 882:	0f 90       	pop	r0
+ 884:	0f be       	out	0x3f, r0	; 63
+ 886:	0f 90       	pop	r0
+ 888:	1f 90       	pop	r1
+ 88a:	18 95       	reti
+
+0000088c <__tablejump2__>:
+ 88c:	ee 0f       	add	r30, r30
+ 88e:	ff 1f       	adc	r31, r31
+ 890:	05 90       	lpm	r0, Z+
+ 892:	f4 91       	lpm	r31, Z
+ 894:	e0 2d       	mov	r30, r0
+ 896:	09 94       	ijmp
+
+00000898 <eeprom_read_byte>:
+ 898:	e1 99       	sbic	0x1c, 1	; 28
+ 89a:	fe cf       	rjmp	.-4      	; 0x898 <eeprom_read_byte>
+ 89c:	9f bb       	out	0x1f, r25	; 31
+ 89e:	8e bb       	out	0x1e, r24	; 30
+ 8a0:	e0 9a       	sbi	0x1c, 0	; 28
+ 8a2:	99 27       	eor	r25, r25
+ 8a4:	8d b3       	in	r24, 0x1d	; 29
+ 8a6:	08 95       	ret
+
+000008a8 <eeprom_write_byte>:
+ 8a8:	26 2f       	mov	r18, r22
+
+000008aa <eeprom_write_r18>:
+ 8aa:	e1 99       	sbic	0x1c, 1	; 28
+ 8ac:	fe cf       	rjmp	.-4      	; 0x8aa <eeprom_write_r18>
+ 8ae:	9f bb       	out	0x1f, r25	; 31
+ 8b0:	8e bb       	out	0x1e, r24	; 30
+ 8b2:	2d bb       	out	0x1d, r18	; 29
+ 8b4:	0f b6       	in	r0, 0x3f	; 63
+ 8b6:	f8 94       	cli
+ 8b8:	e2 9a       	sbi	0x1c, 2	; 28
+ 8ba:	e1 9a       	sbi	0x1c, 1	; 28
+ 8bc:	0f be       	out	0x3f, r0	; 63
+ 8be:	01 96       	adiw	r24, 0x01	; 1
+ 8c0:	08 95       	ret
+
+000008c2 <_exit>:
+ 8c2:	f8 94       	cli
+
+000008c4 <__stop_program>:
+ 8c4:	ff cf       	rjmp	.-2      	; 0x8c4 <__stop_program>
